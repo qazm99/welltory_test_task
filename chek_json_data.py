@@ -43,10 +43,7 @@ def chek_data(schemas):
                             current_err = error_clear(error_validate)
                             errors.append(current_err)
                     except ValidationError as e:
-                        if e.message.find('is a required property'):
-                            print(f"Ушли в исключения {e.message}")
-                        else:
-                            print(e.message)
+                        print(e.message)
                 else:
                     errors.append(f"нет схемы для события {event_data}")
             else:
